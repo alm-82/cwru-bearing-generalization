@@ -7,7 +7,7 @@ Checks rerun on 15 October 2026 distinguish preservation of historical evidence 
 | Historical configurations, manifests, recording metadata, result JSON and seven saved logs | Preserved without numerical changes |
 | Recording validation | All 40 selected records match the stored local checksums, expected signal keys, sample counts, and segment bounds |
 | Historical preprocessing | All 1,880 spectrogram arrays match exactly across four profiles; zero changed pixels |
-| Engineering tests | 44 CPU tests pass without skips in the inspected ML environment |
+| Engineering tests | 48 CPU tests pass without skips in the inspected ML environment |
 | Model semantics | Classifier dimensions, trainable parameter counts, BatchNorm/stochastic-layer modes, checkpoint selection and restoration checked |
 | Random-state fidelity | Cross-fault-size pre-model sanity iteration and stage-boundary validation order covered by regression tests; no CFS seed reset added |
 | Classical historical evidence | Six verbatim saved outputs match E82/E85/E93/E95/E102/E103; structured accuracies and confusion matrices agree, including RMS-only transfer 231/708 |
@@ -15,9 +15,9 @@ Checks rerun on 15 October 2026 distinguish preservation of historical evidence 
 | Classical methods | Synthetic tests check feature extraction, training-only scaling, selected recording families, and split sample counts for the three SVM protocols |
 | Public notebooks | All five schemas and code-cell syntax pass; 33 code cells execute through genuine Jupyter kernels, following a successful minimal preflight |
 | Saved notebook outputs | Tables and synthetic illustrations come from safe execution; final research scores are read from historical evidence |
-| Publication boundary | Tests reject path escapes, unexpected candidate files, private-content patterns, error outputs, and existing destinations |
+| Repository inventory and content | The verifier uses Git-tracked files; strict checks reject missing tracked files, non-ignored untracked files, path escapes, private-content patterns and saved notebook errors. Git metadata and ignored runtime artifacts are excluded |
 
-The complete 44-test suite was rerun in the inspected CPU ML environment with this checkout on the import path. All five default notebooks were separately rerun in fresh Jupyter kernels using the repository-local virtual environment. A fresh PowerShell session verified that environment, checked its installed dependencies, validated all 40 recordings, and generated the 180 CFS images in an ignored directory. Existing environments were reused; no fresh dependency installation or full training was performed.
+The complete 48-test suite was rerun in the inspected CPU ML environment with this checkout on the import path. All five default notebooks were separately rerun in fresh Jupyter kernels using the repository-local virtual environment. A fresh PowerShell session verified that environment, checked its installed dependencies, validated all 40 recordings, and generated the 180 CFS images in an ignored directory. Existing environments were reused; no fresh dependency installation or full training was performed.
 
 The full CPU suite uses temporary synthetic datasets, random-weight models, and a tiny offline training/checkpoint/evaluation round trip. Its metrics are test fixtures, not additional CWRU findings. The separate Windows notebook environment uses Python 3.13.2 and the direct versions in `requirements-notebooks-windows.txt`; it does not require torch or raw recordings for the default notebook paths.
 

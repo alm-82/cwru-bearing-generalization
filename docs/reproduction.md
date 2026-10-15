@@ -97,9 +97,12 @@ Runs retain full resolved configuration, class mapping, preprocessing metadata, 
 
 ```powershell
 .\.venv\Scripts\python.exe -m unittest discover -s tests -v
+.\.venv\Scripts\python.exe scripts/verify_repository.py --strict
 .\.venv\Scripts\python.exe scripts/check_notebooks.py
 .\.venv\Scripts\python.exe scripts/execute_notebooks.py
 ```
+
+The repository verifier checks files tracked in Git’s index. Stage intended file additions and removals before using `--strict`; it rejects missing tracked files and non-ignored untracked files. Git metadata and ignored runtime artifacts are excluded.
 
 The last command executes all five safe default paths through actual Jupyter kernels and writes only under ignored `work/`. It removes the raw-data environment variable for those runs. Full model checks require the optional torch/torchvision installation above; a notebook-only environment skips those checks. Tests use temporary synthetic inputs, random-weight or tiny models, and no pretrained downloads. Their metrics are engineering fixtures, not additional CWRU findings.
 
