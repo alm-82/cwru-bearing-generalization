@@ -1,0 +1,201 @@
+{
+  "evidence_status": "historical_saved_notebook_outputs",
+  "weights_available": false,
+  "cross_load": {
+    "accuracy": 0.9896551724137931,
+    "macro_f1": 0.989590465058028,
+    "confusion_matrix": [
+      [
+        29,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        29,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        29,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        29,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        29,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        28,
+        0,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        27,
+        0,
+        1,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        29,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        29,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        29
+      ]
+    ],
+    "matrix_provenance": "Transcribed from D50; three mistakes also listed in D52",
+    "source_cells": [
+      50,
+      51,
+      52
+    ],
+    "metrics_provenance": {
+      "accuracy": "Derived from the saved historical confusion matrix; not a new model run.",
+      "macro_f1": "Derived from the saved historical confusion matrix; not a new model run.",
+      "loss": "Transcribed at saved print precision from D50 (D_cell_050.txt); not derived from the matrix."
+    },
+    "loss": 0.082502
+  },
+  "cross_fault_size": {
+    "accuracy": 0.7,
+    "macro_f1": 0.6837629496696305,
+    "loss": 0.5943733811378479,
+    "confusion_matrix": [
+      [
+        15,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        4,
+        0,
+        11
+      ],
+      [
+        0,
+        7,
+        8,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        15
+      ]
+    ],
+    "matrix_provenance": "Transcribed from D79",
+    "source_cells": [
+      79,
+      80
+    ],
+    "metrics_provenance": {
+      "accuracy": "Derived from the saved historical confusion matrix; not a new model run.",
+      "macro_f1": "Derived from the saved historical confusion matrix; not a new model run.",
+      "loss": "Transcribed at saved print precision from D79 (D_cell_079.txt); not derived from the matrix."
+    }
+  },
+  "classical": {
+    "fixed_size_cross_load_accuracy": 1.0,
+    "fault_only_size_transfer_accuracy": 0.4378531073446328,
+    "source_cells": [
+      82,
+      85,
+      93,
+      95,
+      102,
+      103
+    ],
+    "fixed_size_cross_load_rms_only_accuracy": 1.0,
+    "fault_only_size_transfer_rms_only_accuracy": 0.326271186440678,
+    "evidence_file": "classical_svm_evidence.json",
+    "metrics_provenance": "Historical accuracy observations transcribed from E82/E85/E93/E95/E102/E103. Existing unsuffixed keys denote four-feature SVMs. Protocols, verbatim stdout, class orders and matrices are in classical_svm_evidence.json.",
+    "joint_load_size_transfer_four_features_accuracy": 0.5869565217391305,
+    "joint_load_size_transfer_rms_only_accuracy": 0.6835748792270532
+  }
+}

@@ -1,0 +1,302 @@
+{
+  "evidence_status": "historical_saved_notebook_outputs",
+  "source_notebook": "01_cwru_exploration.ipynb",
+  "source_notebook_sha256": "f5da948f551ca9fe66ba355a915e44d50bfa3d465bff0869b693a6ac5be92225",
+  "cell_index_convention": "One-based cell positions, including Markdown and empty cells; not execution counts.",
+  "scope": "Verbatim saved stdout extracts from the privately retained original notebook. Structured observations transcribe those outputs; no experiment was rerun. Warning streams with local environment paths are excluded.",
+  "protocols": {
+    "fixed_size_cross_load": {
+      "context_cells": [
+        79,
+        80,
+        81
+      ],
+      "window_length_samples": 2048,
+      "fault_size_inch": 0.007,
+      "train_load_hp": [
+        0,
+        1,
+        2
+      ],
+      "test_load_hp": [
+        3
+      ],
+      "healthy_included": true
+    },
+    "fault_only_size_transfer": {
+      "context_cells": [
+        100,
+        101
+      ],
+      "window_length_samples": 2048,
+      "train_fault_size_inch": 0.007,
+      "test_fault_size_inch": 0.014,
+      "loads_hp": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "healthy_included": false
+    },
+    "joint_load_size_transfer": {
+      "context_cells": [
+        86,
+        90,
+        91,
+        92,
+        95
+      ],
+      "window_length_samples": 2048,
+      "train_load_hp": [
+        0,
+        1,
+        2
+      ],
+      "test_load_hp": [
+        3
+      ],
+      "train_fault_size_inch": 0.007,
+      "test_fault_size_inch": 0.014,
+      "healthy_included": true,
+      "limitation": "Load and fault size shift together; test set is healthy-dominated. This is distinct from fault-only all-load transfer."
+    }
+  },
+  "observations": [
+    {
+      "id": "fixed_size_cross_load_four_features",
+      "source_cell": 82,
+      "features": [
+        "RMS",
+        "Peak",
+        "Kurtosis",
+        "CrestFactor"
+      ],
+      "accuracy": 1.0,
+      "class_order": [
+        "Healthy",
+        "InnerRace",
+        "Ball",
+        "OuterRace"
+      ],
+      "confusion_matrix": [
+        [
+          237,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          60,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          59,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          59
+        ]
+      ],
+      "saved_output": "Accuracy: 1.0\n\nClassification Report:\n              precision    recall  f1-score   support\n\n        Ball       1.00      1.00      1.00        59\n     Healthy       1.00      1.00      1.00       237\n   InnerRace       1.00      1.00      1.00        60\n   OuterRace       1.00      1.00      1.00        59\n\n    accuracy                           1.00       415\n   macro avg       1.00      1.00      1.00       415\nweighted avg       1.00      1.00      1.00       415\n\n\nConfusion Matrix:\n[[237   0   0   0]\n [  0  60   0   0]\n [  0   0  59   0]\n [  0   0   0  59]]\n"
+    },
+    {
+      "id": "fixed_size_cross_load_rms_only",
+      "source_cell": 85,
+      "features": [
+        "RMS"
+      ],
+      "accuracy": 1.0,
+      "class_order": [
+        "Healthy",
+        "InnerRace",
+        "Ball",
+        "OuterRace"
+      ],
+      "confusion_matrix": [
+        [
+          237,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          60,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          59,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          59
+        ]
+      ],
+      "saved_output": "RMS-only Accuracy: 1.0\n\nClassification Report:\n              precision    recall  f1-score   support\n\n        Ball       1.00      1.00      1.00        59\n     Healthy       1.00      1.00      1.00       237\n   InnerRace       1.00      1.00      1.00        60\n   OuterRace       1.00      1.00      1.00        59\n\n    accuracy                           1.00       415\n   macro avg       1.00      1.00      1.00       415\nweighted avg       1.00      1.00      1.00       415\n\n\nConfusion Matrix:\n[[237   0   0   0]\n [  0  60   0   0]\n [  0   0  59   0]\n [  0   0   0  59]]\n"
+    },
+    {
+      "id": "fault_only_size_transfer_four_features",
+      "source_cell": 102,
+      "features": [
+        "RMS",
+        "Peak",
+        "Kurtosis",
+        "CrestFactor"
+      ],
+      "accuracy": 0.4378531073446328,
+      "class_order": [
+        "InnerRace",
+        "Ball",
+        "OuterRace"
+      ],
+      "confusion_matrix": [
+        [
+          236,
+          0,
+          0
+        ],
+        [
+          162,
+          74,
+          0
+        ],
+        [
+          4,
+          232,
+          0
+        ]
+      ],
+      "saved_output": "Fault-size generalization Accuracy: 0.4378531073446328\n\nClassification Report:\n              precision    recall  f1-score   support\n\n        Ball       0.24      0.31      0.27       236\n   InnerRace       0.59      1.00      0.74       236\n   OuterRace       0.00      0.00      0.00       236\n\n    accuracy                           0.44       708\n   macro avg       0.28      0.44      0.34       708\nweighted avg       0.28      0.44      0.34       708\n\n\nConfusion Matrix:\n[[236   0   0]\n [162  74   0]\n [  4 232   0]]\n"
+    },
+    {
+      "id": "fault_only_size_transfer_rms_only",
+      "source_cell": 103,
+      "features": [
+        "RMS"
+      ],
+      "accuracy": 0.326271186440678,
+      "class_order": [
+        "InnerRace",
+        "Ball",
+        "OuterRace"
+      ],
+      "confusion_matrix": [
+        [
+          1,
+          235,
+          0
+        ],
+        [
+          6,
+          230,
+          0
+        ],
+        [
+          0,
+          236,
+          0
+        ]
+      ],
+      "saved_output": "RMS-only fault-size Accuracy: 0.326271186440678\n              precision    recall  f1-score   support\n\n        Ball       0.33      0.97      0.49       236\n   InnerRace       0.14      0.00      0.01       236\n   OuterRace       0.00      0.00      0.00       236\n\n    accuracy                           0.33       708\n   macro avg       0.16      0.33      0.17       708\nweighted avg       0.16      0.33      0.17       708\n\n[[  1 235   0]\n [  6 230   0]\n [  0 236   0]]\n"
+    },
+    {
+      "id": "joint_load_size_transfer_four_features",
+      "source_cell": 93,
+      "features": [
+        "RMS",
+        "Peak",
+        "Kurtosis",
+        "CrestFactor"
+      ],
+      "accuracy": 0.5869565217391305,
+      "class_order": [
+        "Healthy",
+        "InnerRace",
+        "Ball",
+        "OuterRace"
+      ],
+      "confusion_matrix": [
+        [
+          237,
+          0,
+          0,
+          0
+        ],
+        [
+          59,
+          0,
+          0,
+          0
+        ],
+        [
+          32,
+          21,
+          6,
+          0
+        ],
+        [
+          55,
+          3,
+          1,
+          0
+        ]
+      ],
+      "saved_output": "Unseen fault-size Accuracy: 0.5869565217391305\n\nClassification Report:\n              precision    recall  f1-score   support\n\n        Ball       0.86      0.10      0.18        59\n     Healthy       0.62      1.00      0.76       237\n   InnerRace       0.00      0.00      0.00        59\n   OuterRace       0.00      0.00      0.00        59\n\n    accuracy                           0.59       414\n   macro avg       0.37      0.28      0.24       414\nweighted avg       0.48      0.59      0.46       414\n\n\nConfusion Matrix:\n[[237   0   0   0]\n [ 59   0   0   0]\n [ 32  21   6   0]\n [ 55   3   1   0]]\n"
+    },
+    {
+      "id": "joint_load_size_transfer_rms_only",
+      "source_cell": 95,
+      "features": [
+        "RMS"
+      ],
+      "accuracy": 0.6835748792270532,
+      "class_order": [
+        "Healthy",
+        "InnerRace",
+        "Ball",
+        "OuterRace"
+      ],
+      "confusion_matrix": [
+        [
+          237,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          59,
+          0
+        ],
+        [
+          12,
+          1,
+          46,
+          0
+        ],
+        [
+          54,
+          0,
+          5,
+          0
+        ]
+      ],
+      "saved_output": "RMS-only unseen-size Accuracy: 0.6835748792270532\n              precision    recall  f1-score   support\n\n        Ball       0.42      0.78      0.54        59\n     Healthy       0.78      1.00      0.88       237\n   InnerRace       0.00      0.00      0.00        59\n   OuterRace       0.00      0.00      0.00        59\n\n    accuracy                           0.68       414\n   macro avg       0.30      0.44      0.36       414\nweighted avg       0.51      0.68      0.58       414\n\n[[237   0   0   0]\n [  0   0  59   0]\n [ 12   1  46   0]\n [ 54   0   5   0]]\n"
+    }
+  ]
+}

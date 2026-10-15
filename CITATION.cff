@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this software or its research walkthroughs, please cite this repository."
+title: "CWRU Bearing Diagnosis and Generalization"
+type: software
+authors:
+  - given-names: "Ali"
+    family-names: "Mirzaabolhassani"
+version: "0.1.0"
+license: MIT
+abstract: >-
+  Undergraduate research software for inspecting CWRU bearing vibration signals,
+  FFT and Hilbert-envelope exploration, bearing-frequency rules, classical
+  feature and SVM baselines, STFT representations, and EfficientNet-B0
+  experiments across operating loads and fault sizes. The repository preserves
+  historical results and provides supported notebooks and prospective execution
+  code. Original trained weights are unavailable; full historical training has
+  not been independently reproduced.
+keywords:
+  - bearing fault diagnosis
+  - CWRU
+  - signal processing
+  - transfer learning

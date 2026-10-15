@@ -1,0 +1,28 @@
+name: Lightweight correctness checks
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  preprocessing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install -e . nbformat
+      - run: python -m unittest discover -s tests -v
+      - run: python scripts/check_notebooks.py
+  model-semantics:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+      - run: python -m pip install torch==2.7.1 torchvision==0.22.1 --index-url https://download.pytorch.org/whl/cpu
+      - run: python -m pip install -e ".[notebooks]"
+      - run: python scripts/execute_notebooks.py
+      - run: python -m unittest discover -s tests -v
+        env:
+          CWRU_REQUIRE_TORCH: '1'

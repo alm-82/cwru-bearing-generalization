@@ -1,0 +1,22 @@
+Epoch 01/20 | Train loss=0.2604 acc=0.983 | Val loss=1.8488 acc=0.333 F1=0.280
+Epoch 02/20 | Train loss=0.1664 acc=1.000 | Val loss=1.8686 acc=0.400 F1=0.379
+Epoch 03/20 | Train loss=0.1548 acc=0.950 | Val loss=1.9861 acc=0.433 F1=0.400
+Epoch 04/20 | Train loss=0.1022 acc=0.983 | Val loss=2.1773 acc=0.467 F1=0.393
+Epoch 05/20 | Train loss=0.1160 acc=0.983 | Val loss=2.2946 acc=0.467 F1=0.393
+Epoch 06/20 | Train loss=0.0652 acc=1.000 | Val loss=2.3549 acc=0.467 F1=0.401
+Epoch 07/20 | Train loss=0.1129 acc=0.983 | Val loss=2.3962 acc=0.467 F1=0.401
+Epoch 08/20 | Train loss=0.0440 acc=1.000 | Val loss=2.4958 acc=0.467 F1=0.401
+Epoch 09/20 | Train loss=0.0610 acc=0.983 | Val loss=2.5568 acc=0.483 F1=0.409
+Epoch 10/20 | Train loss=0.0258 acc=1.000 | Val loss=2.5567 acc=0.383 F1=0.355
+Epoch 11/20 | Train loss=0.0357 acc=1.000 | Val loss=2.6138 acc=0.467 F1=0.401
+Epoch 12/20 | Train loss=0.0327 acc=1.000 | Val loss=2.7322 acc=0.467 F1=0.401
+Epoch 13/20 | Train loss=0.0577 acc=1.000 | Val loss=2.8187 acc=0.467 F1=0.401
+Epoch 14/20 | Train loss=0.0315 acc=1.000 | Val loss=2.8879 acc=0.467 F1=0.401
+Epoch 15/20 | Train loss=0.0449 acc=0.983 | Val loss=2.8444 acc=0.467 F1=0.401
+Epoch 16/20 | Train loss=0.0200 acc=1.000 | Val loss=2.7964 acc=0.483 F1=0.409
+Epoch 17/20 | Train loss=0.0476 acc=0.983 | Val loss=2.8231 acc=0.467 F1=0.401
+Epoch 18/20 | Train loss=0.0275 acc=1.000 | Val loss=3.0094 acc=0.467 F1=0.401
+Epoch 19/20 | Train loss=0.0143 acc=1.000 | Val loss=2.9713 acc=0.467 F1=0.401
+Epoch 20/20 | Train loss=0.0142 acc=1.000 | Val loss=2.9657 acc=0.467 F1=0.401
+
+Best epoch=9 | Val Macro-F1=0.4091 | Val Loss=2.5568

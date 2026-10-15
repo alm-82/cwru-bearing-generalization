@@ -1,0 +1,17 @@
+# Notebook inspection environment tested on Windows / Python 3.13.2.
+# No torch or pretrained weights required; not a historical research lock.
+numpy==2.2.4
+scipy==1.15.2
+pandas==2.2.3
+pillow==11.2.1
+scikit-learn==1.6.1
+jupyterlab==4.6.4
+nbformat==5.11.1
+nbclient==0.11.0
+ipykernel==7.4.0
+jupyter-client==8.10.0
+jupyter-core==5.9.1
+pyzmq==27.2.0
+tornado==6.5.10
+ipython==9.17.1
+matplotlib==3.11.2

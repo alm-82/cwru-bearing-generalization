@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cwru-bearing-generalization"
+version = "0.1.0"
+license = {file = "LICENSE"}
+authors = [{name = "Ali Mirzaabolhassani"}]
+description = "Historical CWRU bearing diagnosis methods and transparent generalization analysis"
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26,<3", "scipy>=1.11,<2", "pandas>=2.1,<3", "Pillow>=10,<12", "scikit-learn>=1.4,<2"]
+
+[project.optional-dependencies]
+ml = ["torch>=2.7,<3", "torchvision>=0.22,<1"]
+notebooks = ["jupyterlab>=4,<5", "nbformat>=5.10,<6", "nbclient>=0.10,<1", "matplotlib>=3.8,<4"]
+
+[project.scripts]
+cwru-bearing = "cwru_bearing.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

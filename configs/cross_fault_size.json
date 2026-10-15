@@ -1,0 +1,65 @@
+{
+  "protocol_version": "historical-v1",
+  "processing_rate_hz": 12000,
+  "segment_length": 4096,
+  "nperseg": 512,
+  "noverlap": 448,
+  "nfft": 512,
+  "window": "hann",
+  "boundary": null,
+  "padded": false,
+  "epsilon": 1e-12,
+  "percentiles": [
+    0.5,
+    99.5
+  ],
+  "flip_vertical": true,
+  "image_size": 224,
+  "dropout": 0.2,
+  "weight_decay": 0.0001,
+  "signal_dtype": "float64",
+  "quantization": "truncate",
+  "stage1": {
+    "epochs": 15,
+    "classifier_lr": 0.001,
+    "mode": "features_eval"
+  },
+  "num_workers": 0,
+  "pin_memory": false,
+  "seed": null,
+  "loader_generator_seed": null,
+  "tie_break": "exact",
+  "transform_order": "resize_then_grayscale",
+  "manifest": "manifest_crossfaultsize.csv",
+  "classes": [
+    "Healthy",
+    "IR",
+    "Ball",
+    "OR"
+  ],
+  "stage2": {
+    "epochs": 20,
+    "backbone_lr": 5e-05,
+    "classifier_lr": 0.001,
+    "mode": "all_bn_eval"
+  },
+  "historical_image_root": "spectrograms_crossfaultsize",
+  "image_pattern": "class{class_label}_{file_id}_seg{segment_idx:02d}.png",
+  "source_cells": {
+    "exploration": [
+      185,
+      186
+    ],
+    "training": [
+      57,
+      59,
+      63,
+      67,
+      70,
+      71,
+      79
+    ]
+  },
+  "name": "cross_fault_size",
+  "batch_size": 8
+}

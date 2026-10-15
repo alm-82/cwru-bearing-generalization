@@ -1,0 +1,11 @@
+# Inspected Windows CPU versions; not a complete historical lock or tested fresh install.
+numpy==2.2.4
+scipy==1.15.2
+pandas==2.2.3
+Pillow==11.2.1
+scikit-learn==1.6.1
+torch==2.7.1
+torchvision==0.22.1
+matplotlib==3.10.1
+nbformat==5.10.4
+nbclient==0.10.2

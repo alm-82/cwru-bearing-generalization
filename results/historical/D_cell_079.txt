@@ -1,0 +1,11 @@
+========== FINAL TEST: 0.021 inch ==========
+Test Loss: 0.5943733811378479
+Test Accuracy: 0.7
+Test Macro-F1: 0.6837629496696305
+Test Balanced Accuracy: 0.7
+
+Confusion Matrix:
+[[15  0  0  0]
+ [ 0  4  0 11]
+ [ 0  7  8  0]
+ [ 0  0  0 15]]
